@@ -1,27 +1,35 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Index from '../views/Index.vue'
-import Topic from '../views/Topic.vue'
+import ArticleList from "../components/ArticleList";
+import Article from "../components/Article";
+import UserInfo from "../components/UserInfo";
+import SideBar from "../components/SideBar"
 Vue.use(VueRouter)
+
 
 const routes = [
   {
     path: '/',
-    name: 'cnodeHead',
-    component: Index
+    name: 'index',
+    components: {
+      main:ArticleList
+    }
   },
   {
-    path:'/topic/:id',
-    name: 'topic',
-    component: Topic
+    path:'/topic/:id&author=:name',
+    name: 'article',
+    components: {
+      main: Article,
+      sidebar: SideBar
+    }
   },
   {
-    path: '/topic',
-    redirect: '/'
-  },
-  {
-    path: '/user',
-    redirect: '/'
+    path: '/user:name',
+    name:'userInfo',
+    components: {
+      main: UserInfo,
+      sidebar: SideBar
+    }
   }
 ]
 
