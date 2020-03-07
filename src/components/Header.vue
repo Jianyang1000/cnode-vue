@@ -3,13 +3,18 @@
       <router-link :to="{name:'index'}">
           <img src="../assets/backgroundImg.svg" alt="logo" />
       </router-link>
-      <a href="#" class="about">关于</a>
+      <span @click="showInfo" class="about">关于</span>
     </div>
 </template>
 
 <script>
 export default {
-  name: "Head",
+    name: "Head",
+    methods: {
+        showInfo(){
+            this.$emit('showInfo')
+        }
+    }
 };
 </script>
 
@@ -23,6 +28,7 @@ export default {
   display: flex;
   justify-content: space-around;
   img{width: 120px;display: inline-block;}
-  .about {margin-top: 6px;color: #ccc;font-size: 13px;}
+  .about {margin-top: 6px;color: #ccc;font-size: 13px;
+      cursor: pointer;}
 }
 </style>

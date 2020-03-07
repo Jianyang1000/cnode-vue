@@ -37,7 +37,6 @@
                             <span>　{{index+1}}楼 • {{changeTime(list.create_at)}}</span>
                         </router-link>
 
-
                     </div>
                     <p class="replyContentInfo" v-html="list.content">
 

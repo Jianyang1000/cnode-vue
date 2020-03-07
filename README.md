@@ -1,29 +1,21 @@
 # cnode
 
-## Project setup
+## 安装项目依赖
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 启动
 ```
 yarn run serve
 ```
 
-### Compiles and minifies for production
-```
-yarn run build
-```
 
-### Run your tests
-```
-yarn run test
-```
+### 项目简介
 
-### Lints and fixes files
-```
-yarn run lint
-```
+本项目是一个vue初中级项目，模仿一个简易的CNode社区，共有5个组件。分别为头部、话题列表、话题详情、用户个人信息、侧边栏
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+所用技术栈
+
+Vue、VueRouter、Axios
+
